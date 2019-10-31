@@ -16,12 +16,18 @@ import net.glxn.qrgen.core.image.ImageType;
 @RestController
 @RequestMapping(value = "/")
 public class QrCodeController {
-	
+
+	/**
+	 * Takes the input text query parameter, generates a png qr code and returns it
+	 * 
+	 * @param inputText the text which will be encoded in the qr code
+	 * @return a byte array which contains the image
+	 */
 	@ResponseBody
 	@RequestMapping(value = "/qrcode", method = RequestMethod.GET, produces = MediaType.IMAGE_PNG_VALUE)
 	public byte[] getQrCode(@RequestParam(name = "inputText") String inputText) {
-	    QrCodeGenerator qrCodeGenerator = new QrCodeGenerator(ImageType.PNG, StandardCharsets.UTF_8.name());
-	    return qrCodeGenerator.generateCode(inputText);
+		QrCodeGenerator qrCodeGenerator = new QrCodeGenerator(ImageType.PNG, StandardCharsets.UTF_8.name());
+		return qrCodeGenerator.generateCode(inputText);
 	}
 
 }
