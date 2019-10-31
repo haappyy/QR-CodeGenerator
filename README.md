@@ -9,5 +9,9 @@ Use the query param `inputText` to determine the content of the qr code.
 
 Use `docker build` to build the container and `docker run` to run it. Expose port 8080.
 
+# Swagger UI
+
+The Swagger UI is reachable at `http://localhost:8080/swagger-ui.html`.
+
 
 
