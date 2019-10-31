@@ -5,5 +5,5 @@ This is a spring boot project. Add additional dependencies in the pom.xml.
 
 # Docker 
 
-Use docker build to build the container and docker run to run it. Expose port 8080.
+Use `docker build` to build the container and `docker run` to run it. Expose port 8080.
 
